@@ -1,7 +1,6 @@
 from modules.company import schemas
 from modules.company.repository import CompanyRepository
 
-
 class CompanyService:
     def get_companies(self):
         repository = CompanyRepository()

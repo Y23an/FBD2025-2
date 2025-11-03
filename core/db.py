@@ -41,11 +41,11 @@ class DataBase:
 
     def _get_conn(self):
         self.conn = psycopg2.connect(
-            host="localhost",
-            database="your_database",
-            user="your_user",
-            password="your_password",
-            port="5432"
+            host=settings.DB_HOST,
+            database=settings.DB_NAME,
+            user=settings.DB_USER,
+            password=settings.DB_PASSWORD,
+            port=settings.DB_PORT
         )
 
     def execute(self, sql, many=True):
